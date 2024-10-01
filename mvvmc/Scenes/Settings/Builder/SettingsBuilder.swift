@@ -8,8 +8,9 @@
 import Foundation
 
 final class SettingsBuilder {
-    static func generateSettingsView(pageTitle: String) -> SettingsViewController {
-        let settingsViewController = SettingsViewController(pageTitle: pageTitle)
+    static func generateSettingsView(delegate: SettingsCoordinatorNavigationProtocol, pageTitle: String) -> SettingsViewController {
+        let settingsViewModel = SettingsViewModel(navigationDelegate: delegate, pageTitle: "Settings")
+        let settingsViewController = SettingsViewController(viewModel: settingsViewModel)
         return settingsViewController
     }
 }

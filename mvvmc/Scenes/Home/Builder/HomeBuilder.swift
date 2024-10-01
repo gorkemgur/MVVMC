@@ -8,10 +8,9 @@
 import Foundation
 
 final class HomeBuilder {
-    static func generateHomeView(navigationDelegate: HomeCoorDinatorNavigationDelegate) -> HomeViewController {
-        let homeViewModel = HomeViewModel()
+    static func generateHomeView(navigationDelegate: HomeCoordinatorNavigationDelegate) -> HomeViewController {
+        let homeViewModel = HomeViewModel(navigationDelegate: navigationDelegate)
         let homeViewController = HomeViewController(viewModel: homeViewModel)
-        homeViewController.navigationDelegate = navigationDelegate
         return homeViewController
     }
 }

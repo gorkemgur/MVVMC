@@ -7,27 +7,28 @@
 
 import UIKit
 
-protocol SplashCoorDinatorDelegate: AnyObject {
-    func splashCoordinatorDidFinish(_ coordinator: SplashCoorDinator)
+protocol SplashCoordinatorNavigationDelegate: AnyObject {
+    func navigate(to navigationType: SplashNavigationType)
 }
 
-final class SplashCoorDinator: CoordinatorProtocol {
+final class SplashCoordinator: CoordinatorProtocol {
     let navigationController: UINavigationController
     
-    weak var delegate: SplashCoorDinatorDelegate?
+    private let splashNavigationDelegate: SplashCoordinatorNavigationDelegate
     
-    init(navigationController: UINavigationController) {
+    init(splashNavigationDelegate: SplashCoordinatorNavigationDelegate, navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.splashNavigationDelegate = splashNavigationDelegate
     }
     
     func start() {
-        let splashViewController = SplashBuilder.generateSplashView(splashNavigationDelegate: self)
+        let splashViewController = SplashBuilder.generateSplashView(splashNavigationDelegate: splashNavigationDelegate)
         navigationController.setViewControllers([splashViewController], animated: true)
     }
 }
 
-extension SplashCoorDinator: SplashNavigationDelegate {
-    func splashDidFinish() {
-        delegate?.splashCoordinatorDidFinish(self)
-    }
+
+enum SplashNavigationType {
+    case home
+    case login
 }

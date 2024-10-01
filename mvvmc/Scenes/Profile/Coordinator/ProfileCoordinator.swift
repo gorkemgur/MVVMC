@@ -8,7 +8,7 @@
 import UIKit
 
 // To handle profile navigation
-protocol ProfileCoorDinatorNavigationDelegate {
+protocol ProfileCoordinatorNavigationDelegate {
     func handleNavigation(_ navigationType: ProfileNavigationType)
 }
 
@@ -25,11 +25,11 @@ final class ProfileCoordinator: CoordinatorProtocol {
     }
 }
 
-extension ProfileCoordinator: ProfileCoorDinatorNavigationDelegate {
+extension ProfileCoordinator: ProfileCoordinatorNavigationDelegate {
     func handleNavigation(_ navigationType: ProfileNavigationType) {
         switch navigationType {
         case .settings(let pageTitle):
-            let settingsCoorDinator = SettingsCoorDinator(navigationController: navigationController, pageTitle: pageTitle)
+            let settingsCoorDinator = SettingsCoordinator(navigationController: navigationController, pageTitle: pageTitle)
             settingsCoorDinator.start()
         }
     }

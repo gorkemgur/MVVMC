@@ -8,8 +8,8 @@
 import Foundation
 
 final class SplashBuilder {
-    static func generateSplashView(splashNavigationDelegate: SplashNavigationDelegate) -> SplashViewController {
-        let splashViewModel = SplashViewModel(delegate: splashNavigationDelegate)
+    static func generateSplashView(splashNavigationDelegate: SplashCoordinatorNavigationDelegate) -> SplashViewController {
+        let splashViewModel = SplashViewModel(navigationDelegate: splashNavigationDelegate)
         let splashViewController = SplashViewController(viewModel: splashViewModel)
         return splashViewController
     }

@@ -8,9 +8,9 @@
 import UIKit
 
 final class ProfileBuilder {
-    static func generateProfileView(delegate: ProfileCoorDinatorNavigationDelegate) -> ProfileViewController {
-        let profileViewModel = ProfileViewModel()
-        let profileViewController = ProfileViewController(viewModel: profileViewModel, navigationDelegate: delegate)
+    static func generateProfileView(delegate: ProfileCoordinatorNavigationDelegate) -> ProfileViewController {
+        let profileViewModel = ProfileViewModel(navigationDelegate: delegate)
+        let profileViewController = ProfileViewController(viewModel: profileViewModel)
         return profileViewController
     }
 }

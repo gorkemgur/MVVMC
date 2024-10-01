@@ -15,15 +15,19 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let splashCoordinator = SplashCoorDinator(navigationController: navigationController)
-        splashCoordinator.delegate = self
+        let splashCoordinator = SplashCoordinator(splashNavigationDelegate: self, navigationController: navigationController)
         splashCoordinator.start()
     }
 }
 
-extension AppCoordinator: SplashCoorDinatorDelegate {
-    func splashCoordinatorDidFinish(_ coordinator: SplashCoorDinator) {
-        showMainCoordinator()
+extension AppCoordinator: SplashCoordinatorNavigationDelegate {
+    func navigate(to navigationType: SplashNavigationType) {
+        switch navigationType {
+        case .home:
+            showMainCoordinator()
+        case .login:
+            break
+        }
     }
     
     private func showMainCoordinator() {

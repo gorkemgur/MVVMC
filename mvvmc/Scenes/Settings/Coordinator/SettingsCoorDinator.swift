@@ -7,7 +7,9 @@
 
 import UIKit
 
-final class SettingsCoorDinator: CoordinatorProtocol {
+protocol SettingsCoordinatorNavigationProtocol: AnyObject {}
+
+final class SettingsCoordinator: CoordinatorProtocol {
     let navigationController: UINavigationController
     private let pageTitle: String
     
@@ -17,7 +19,11 @@ final class SettingsCoorDinator: CoordinatorProtocol {
     }
     
     func start() {
-        let settingsViewController = SettingsBuilder.generateSettingsView(pageTitle: pageTitle)
+        let settingsViewController = SettingsBuilder.generateSettingsView(delegate: self, pageTitle: pageTitle)
         navigationController.pushViewController(settingsViewController, animated: true)
     }
+}
+
+extension SettingsCoordinator: SettingsCoordinatorNavigationProtocol {
+    
 }

@@ -10,6 +10,12 @@ import Foundation
 final class HomeViewModel {
     weak var view: HomeViewDelegate?
     
+    private let navigationDelegate: HomeCoordinatorNavigationDelegate
+    
+    init(navigationDelegate: HomeCoordinatorNavigationDelegate) {
+        self.navigationDelegate = navigationDelegate
+    }
+    
     func viewDidLoad() {
         view?.handleOutput(.showSuccessMessage("Page Load Success"))
     }

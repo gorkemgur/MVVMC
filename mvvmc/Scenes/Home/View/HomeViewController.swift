@@ -25,7 +25,6 @@ final class HomeViewController: UIViewController {
     }()
     
     private let viewModel: HomeViewModel
-    weak var navigationDelegate: HomeCoorDinatorNavigationDelegate?
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel

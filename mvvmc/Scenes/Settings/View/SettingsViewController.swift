@@ -7,13 +7,22 @@
 
 import UIKit
 
+protocol SettingsViewDelegate: AnyObject {
+    func handleOutput(_ splashViewOutput: SettingsViewOutput)
+}
+
+enum SettingsViewOutput {
+    case updateTitle(String)
+}
+
 final class SettingsViewController: UIViewController {
     
-    private let pageTitle: String
+    private let viewModel: SettingsViewModel
     
-    init(pageTitle: String) {
-        self.pageTitle = pageTitle
+    init(viewModel: SettingsViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.view = self
         showInitStatus()
     }
     
@@ -23,7 +32,7 @@ final class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = pageTitle
+        viewModel.viewDidLoad()
         view.backgroundColor = .darkGray
     }
     
@@ -31,4 +40,13 @@ final class SettingsViewController: UIViewController {
         showDeinitStatus()
     }
     
+}
+
+extension SettingsViewController: SettingsViewDelegate {
+    func handleOutput(_ splashViewOutput: SettingsViewOutput) {
+        switch splashViewOutput {
+        case .updateTitle(let pageTitle):
+            title = pageTitle
+        }
+    }
 }

@@ -7,21 +7,18 @@
 
 import Foundation
 
-protocol SplashNavigationDelegate: AnyObject {
-    func splashDidFinish()
-}
 
 final class SplashViewModel {
-    private let delegate: SplashNavigationDelegate
+    private let navigationDelegate: SplashCoordinatorNavigationDelegate
     
-    init(delegate: SplashNavigationDelegate) {
-        self.delegate = delegate
+    init(navigationDelegate: SplashCoordinatorNavigationDelegate) {
+        self.navigationDelegate = navigationDelegate
     }
     
     func viewDidLoad() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
             guard let self = self else { return }
-            self.delegate.splashDidFinish()
+            self.navigationDelegate.navigate(to: .home)
         }
     }
 }

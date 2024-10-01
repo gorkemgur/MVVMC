@@ -12,7 +12,7 @@ enum HomeNavigationType {
 }
 
 // To handle output this is way better to write unit tests
-protocol HomeCoorDinatorNavigationDelegate: AnyObject {
+protocol HomeCoordinatorNavigationDelegate: AnyObject {
     func handleNavigation(_ navigationType: HomeNavigationType)
 }
 
@@ -29,7 +29,7 @@ final class HomeCoordinator: CoordinatorProtocol {
     }
 }
 
-extension HomeCoordinator: HomeCoorDinatorNavigationDelegate {
+extension HomeCoordinator: HomeCoordinatorNavigationDelegate {
     func handleNavigation(_ navigationType: HomeNavigationType) {
         switch navigationType {
         case .sample(let id, let pageTitle):

@@ -34,11 +34,9 @@ final class ProfileViewController: UIViewController {
     }()
     
     private let viewModel: ProfileViewModel
-    private let navigationDelegate: ProfileCoorDinatorNavigationDelegate
     
-    init(viewModel: ProfileViewModel, navigationDelegate: ProfileCoorDinatorNavigationDelegate) {
+    init(viewModel: ProfileViewModel) {
         self.viewModel = viewModel
-        self.navigationDelegate = navigationDelegate
         super.init(nibName: nil, bundle: nil)
         self.viewModel.view = self
         showInitStatus()
@@ -68,7 +66,7 @@ final class ProfileViewController: UIViewController {
     }
     
     @objc private func showSettings() {
-        navigationDelegate.handleNavigation(.settings("SettingsPage"))
+        viewModel.navigate(to: .settings("SettingsPage"))
     }
     
     deinit {
