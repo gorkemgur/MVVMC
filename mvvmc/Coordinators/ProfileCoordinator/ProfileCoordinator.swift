@@ -28,19 +28,15 @@ final class ProfileCoordinator: CoordinatorProtocol {
 
 extension ProfileCoordinator: ProfileCoorDinatorNavigationDelegate {
     func handleNavigation(_ navigationType: ProfileNavigationType) {
-        navigationController.pushViewController(navigationType.willNavigateViewController, animated: true)
+        switch navigationType {
+        case .settings(let pageTitle):
+            let settingsCoorDinator = SettingsCoorDinator(navigationController: navigationController, pageTitle: pageTitle)
+            settingsCoorDinator.start()
+        }
     }
 }
 
 
 enum ProfileNavigationType {
     case settings(String)
-    
-    var willNavigateViewController: UIViewController {
-        switch self {
-        case .settings(let pageTitle):
-            let settingsViewContoller = SettingsViewController(pageTitle: pageTitle)
-            return settingsViewContoller
-        }
-    }
 }

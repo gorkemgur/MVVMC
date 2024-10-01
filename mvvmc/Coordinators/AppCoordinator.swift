@@ -30,7 +30,7 @@ extension AppCoordinator: SplashCoorDinatorDelegate {
     }
     
     private func showMainCoordinator() {
-        let mainCoordinator = factory.createTabbarCoordinator(navigationController: navigationController)
-        mainCoordinator.start()
+        let tabbarCoorDinator = TabbarCoordinator(navigationController: navigationController, factory: factory)
+        tabbarCoorDinator.start()
     }
 }

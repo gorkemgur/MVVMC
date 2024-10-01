@@ -10,7 +10,8 @@ import UIKit
 protocol CoordinatorFactory {
     func removeCoordinator(_ coordinator: CoordinatorProtocol)
     func createSplashCoordinator(navigationController: UINavigationController) -> SplashCoorDinator
-    func createTabbarCoordinator(navigationController: UINavigationController) -> TabbarCoordinator
+    func createHomeCoordinator(navigationController: UINavigationController) -> HomeCoordinator
+    func createProfileCoordinator(navigationController: UINavigationController) -> ProfileCoordinator
 }
 
 final class CoordinatorFactoryImpl: CoordinatorFactory {
@@ -23,13 +24,23 @@ final class CoordinatorFactoryImpl: CoordinatorFactory {
         return splashCoordinator
     }
     
-    func createTabbarCoordinator(navigationController: UINavigationController) -> TabbarCoordinator {
-        let tabbarCoordinator = TabbarCoordinator(navigationController: navigationController)
-        coordinators.append(tabbarCoordinator)
-        return tabbarCoordinator
+    func createHomeCoordinator(navigationController: UINavigationController) -> HomeCoordinator {
+        let homeCoorDinator = HomeCoordinator(navigationController: navigationController)
+        coordinators.append(homeCoorDinator)
+        return homeCoorDinator
+    }
+    
+    func createProfileCoordinator(navigationController: UINavigationController) -> ProfileCoordinator {
+        let profileCoorDinator = ProfileCoordinator(navigationController: navigationController)
+        coordinators.append(profileCoorDinator)
+        return profileCoorDinator
     }
     
     func removeCoordinator(_ coordinator: any CoordinatorProtocol) {
         coordinators.removeAll{ $0 === coordinator }
+    }
+    
+    deinit{
+        print("🥲")
     }
 }
