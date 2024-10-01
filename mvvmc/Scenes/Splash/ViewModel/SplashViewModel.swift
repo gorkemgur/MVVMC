@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol SplashViewModelDelegate: AnyObject {
+protocol SplashNavigationDelegate: AnyObject {
     func splashDidFinish()
 }
 
 final class SplashViewModel {
-    private let delegate: SplashViewModelDelegate
+    private let delegate: SplashNavigationDelegate
     
-    init(delegate: SplashViewModelDelegate) {
+    init(delegate: SplashNavigationDelegate) {
         self.delegate = delegate
     }
     

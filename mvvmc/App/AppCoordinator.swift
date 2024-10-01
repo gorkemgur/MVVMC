@@ -9,15 +9,13 @@ import UIKit
 
 final class AppCoordinator: CoordinatorProtocol {
     let navigationController: UINavigationController
-    let factory: CoordinatorFactory
     
-    init(navigationController: UINavigationController, factory: CoordinatorFactory) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.factory = factory
     }
     
     func start() {
-        let splashCoordinator = factory.createSplashCoordinator(navigationController: navigationController)
+        let splashCoordinator = SplashCoorDinator(navigationController: navigationController)
         splashCoordinator.delegate = self
         splashCoordinator.start()
     }
@@ -25,12 +23,11 @@ final class AppCoordinator: CoordinatorProtocol {
 
 extension AppCoordinator: SplashCoorDinatorDelegate {
     func splashCoordinatorDidFinish(_ coordinator: SplashCoorDinator) {
-        factory.removeCoordinator(coordinator)
         showMainCoordinator()
     }
     
     private func showMainCoordinator() {
-        let tabbarCoorDinator = TabbarCoordinator(navigationController: navigationController, factory: factory)
+        let tabbarCoorDinator = TabbarCoordinator(navigationController: navigationController)
         tabbarCoorDinator.start()
     }
 }

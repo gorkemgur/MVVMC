@@ -17,7 +17,7 @@ final class SettingsCoorDinator: CoordinatorProtocol {
     }
     
     func start() {
-        let settingsViewController = SettingsViewController(pageTitle: pageTitle)
+        let settingsViewController = SettingsBuilder.generateSettingsView(pageTitle: pageTitle)
         navigationController.pushViewController(settingsViewController, animated: true)
     }
 }

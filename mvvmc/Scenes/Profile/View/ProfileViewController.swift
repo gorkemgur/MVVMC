@@ -15,7 +15,7 @@ protocol ProfileViewDelegate: AnyObject {
     func handleOutput(_ output: ProfileViewOutput)
 }
 
-final class ProfileViewController: BaseViewController {
+final class ProfileViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -41,6 +41,7 @@ final class ProfileViewController: BaseViewController {
         self.navigationDelegate = navigationDelegate
         super.init(nibName: nil, bundle: nil)
         self.viewModel.view = self
+        showInitStatus()
     }
     
     required init?(coder: NSCoder) {
@@ -49,6 +50,7 @@ final class ProfileViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = selfPagetitle
         view.backgroundColor = .white.withAlphaComponent(0.65)
         view.addSubViews([
             titleLabel,
@@ -67,6 +69,10 @@ final class ProfileViewController: BaseViewController {
     
     @objc private func showSettings() {
         navigationDelegate.handleNavigation(.settings("SettingsPage"))
+    }
+    
+    deinit {
+        showDeinitStatus()
     }
 }
 

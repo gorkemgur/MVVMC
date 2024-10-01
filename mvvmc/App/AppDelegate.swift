@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let factory = CoordinatorFactoryImpl()
-        appCoorDinator = AppCoordinator(navigationController: UINavigationController(), factory: factory)
+        appCoorDinator = AppCoordinator(navigationController: UINavigationController())
         appCoorDinator?.start()
         window?.rootViewController = appCoorDinator?.navigationController
         window?.makeKeyAndVisible()

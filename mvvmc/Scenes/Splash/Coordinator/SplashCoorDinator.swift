@@ -21,13 +21,12 @@ final class SplashCoorDinator: CoordinatorProtocol {
     }
     
     func start() {
-        let splashViewModel = SplashViewModel(delegate: self)
-        let splashViewController = SplashViewController(viewModel: splashViewModel)
+        let splashViewController = SplashBuilder.generateSplashView(splashNavigationDelegate: self)
         navigationController.setViewControllers([splashViewController], animated: true)
     }
 }
 
-extension SplashCoorDinator: SplashViewModelDelegate {
+extension SplashCoorDinator: SplashNavigationDelegate {
     func splashDidFinish() {
         delegate?.splashCoordinatorDidFinish(self)
     }

@@ -7,14 +7,14 @@
 
 import UIKit
 
-final class SettingsViewController: BaseViewController {
+final class SettingsViewController: UIViewController {
     
     private let pageTitle: String
     
     init(pageTitle: String) {
         self.pageTitle = pageTitle
         super.init(nibName: nil, bundle: nil)
-        self.title = pageTitle
+        showInitStatus()
     }
     
     required init?(coder: NSCoder) {
@@ -23,7 +23,12 @@ final class SettingsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = pageTitle
         view.backgroundColor = .darkGray
+    }
+    
+    deinit {
+        showDeinitStatus()
     }
     
 }

@@ -7,13 +7,14 @@
 
 import UIKit
 
-final class SplashViewController: BaseViewController {
+final class SplashViewController: UIViewController {
     
     private let viewModel: SplashViewModel
     
     init(viewModel: SplashViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        showInitStatus()
     }
     
     required init?(coder: NSCoder) {
@@ -30,6 +31,7 @@ final class SplashViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = selfPagetitle
         view.addSubview(titleLabel)
         view.backgroundColor = .white.withAlphaComponent(0.3)
         NSLayoutConstraint.activate([
@@ -37,6 +39,10 @@ final class SplashViewController: BaseViewController {
             titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         viewModel.viewDidLoad()
+    }
+    
+    deinit {
+        showDeinitStatus()
     }
 
 }

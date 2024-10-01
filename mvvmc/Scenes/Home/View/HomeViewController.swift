@@ -15,7 +15,7 @@ protocol HomeViewDelegate: AnyObject {
     func handleOutput(_ output: HomeViewOutput)
 }
 
-final class HomeViewController: BaseViewController {
+final class HomeViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,6 +31,7 @@ final class HomeViewController: BaseViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.viewModel.view = self
+        showInitStatus()
     }
     
     required init?(coder: NSCoder) {
@@ -39,6 +40,7 @@ final class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = selfPagetitle
         view.backgroundColor = .white
         view.addSubview(titleLabel)
         NSLayoutConstraint.activate([
@@ -53,6 +55,10 @@ final class HomeViewController: BaseViewController {
         navigationDelegate?.handleNavigation(.sample(id: 0, pageTitle: "PAGE"))
      }
      */
+    
+    deinit {
+        showDeinitStatus()
+    }
 }
 
 extension HomeViewController: HomeViewDelegate {

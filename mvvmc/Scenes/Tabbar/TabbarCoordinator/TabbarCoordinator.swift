@@ -10,19 +10,17 @@ import UIKit
 final class TabbarCoordinator: CoordinatorProtocol {
     //Define this variable as let we don't want to change from another class
     let navigationController: UINavigationController
-    private let factory: CoordinatorFactory
     private var tabbarController: UITabBarController?
     
-    init(navigationController: UINavigationController, factory: CoordinatorFactory) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.factory = factory
     }
     
     func start() {
         tabbarController = UITabBarController()
         
-        let homeCoordinator = factory.createHomeCoordinator(navigationController: UINavigationController())
-        let profileCoordinator = factory.createProfileCoordinator(navigationController: UINavigationController())
+        let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
+        let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
         
         homeCoordinator.start()
         profileCoordinator.start()

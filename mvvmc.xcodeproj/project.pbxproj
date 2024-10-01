@@ -11,8 +11,6 @@
 		EE0D528D2CAB6CAA00CE9AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0D528C2CAB6CAA00CE9AAC /* Assets.xcassets */; };
 		EE0D52902CAB6CAA00CE9AAC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE0D528F2CAB6CAA00CE9AAC /* Base */; };
 		EE0D52992CAB6DE600CE9AAC /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52982CAB6DE600CE9AAC /* TabbarCoordinator.swift */; };
-		EE0D529D2CAB6DFA00CE9AAC /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D529C2CAB6DFA00CE9AAC /* CoordinatorProtocol.swift */; };
-		EE0D52A02CAB6E4E00CE9AAC /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D529F2CAB6E4E00CE9AAC /* CoordinatorFactory.swift */; };
 		EE0D52A52CAB707200CE9AAC /* SplashCoorDinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52A42CAB707200CE9AAC /* SplashCoorDinator.swift */; };
 		EE0D52AA2CAB719C00CE9AAC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52A92CAB719C00CE9AAC /* SplashViewController.swift */; };
 		EE0D52AE2CAB720A00CE9AAC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52AD2CAB720A00CE9AAC /* SplashViewModel.swift */; };
@@ -25,10 +23,14 @@
 		EE0D52C32CAB754F00CE9AAC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52C22CAB754F00CE9AAC /* AppCoordinator.swift */; };
 		EE0D52C82CAB7BA700CE9AAC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52C72CAB7BA700CE9AAC /* SettingsViewController.swift */; };
 		EE0D52CC2CAB7C3C00CE9AAC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52CB2CAB7C3C00CE9AAC /* UIView+Extension.swift */; };
-		EE0D52CF2CAB7F5A00CE9AAC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52CE2CAB7F5A00CE9AAC /* BaseViewController.swift */; };
 		EE0D52D22CAB80F900CE9AAC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52D12CAB80F900CE9AAC /* UIViewControllerExtension.swift */; };
 		EE0D52D62CAB8C3E00CE9AAC /* SettingsCoorDinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52D52CAB8C3E00CE9AAC /* SettingsCoorDinator.swift */; };
 		EE0D52D92CAB920200CE9AAC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52D82CAB920200CE9AAC /* UIImageExtension.swift */; };
+		EE0D52DE2CAC727300CE9AAC /* ProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52DD2CAC727300CE9AAC /* ProfileBuilder.swift */; };
+		EE0D52E12CAC73CD00CE9AAC /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52E02CAC73CD00CE9AAC /* HomeBuilder.swift */; };
+		EE0D52E42CAC743200CE9AAC /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52E32CAC743200CE9AAC /* SplashBuilder.swift */; };
+		EE0D52E72CAC74AB00CE9AAC /* SettingsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52E62CAC74AB00CE9AAC /* SettingsBuilder.swift */; };
+		EE0D52EA2CAC753300CE9AAC /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D52E92CAC753300CE9AAC /* CoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +40,6 @@
 		EE0D528F2CAB6CAA00CE9AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE0D52912CAB6CAA00CE9AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE0D52982CAB6DE600CE9AAC /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
-		EE0D529C2CAB6DFA00CE9AAC /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		EE0D529F2CAB6E4E00CE9AAC /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		EE0D52A42CAB707200CE9AAC /* SplashCoorDinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoorDinator.swift; sourceTree = "<group>"; };
 		EE0D52A92CAB719C00CE9AAC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		EE0D52AD2CAB720A00CE9AAC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
@@ -52,10 +52,14 @@
 		EE0D52C22CAB754F00CE9AAC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EE0D52C72CAB7BA700CE9AAC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EE0D52CB2CAB7C3C00CE9AAC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		EE0D52CE2CAB7F5A00CE9AAC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EE0D52D12CAB80F900CE9AAC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		EE0D52D52CAB8C3E00CE9AAC /* SettingsCoorDinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoorDinator.swift; sourceTree = "<group>"; };
 		EE0D52D82CAB920200CE9AAC /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		EE0D52DD2CAC727300CE9AAC /* ProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBuilder.swift; sourceTree = "<group>"; };
+		EE0D52E02CAC73CD00CE9AAC /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		EE0D52E32CAC743200CE9AAC /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		EE0D52E62CAC74AB00CE9AAC /* SettingsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBuilder.swift; sourceTree = "<group>"; };
+		EE0D52E92CAC753300CE9AAC /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +92,10 @@
 		EE0D52822CAB6CA900CE9AAC /* mvvmc */ = {
 			isa = PBXGroup;
 			children = (
-				EE0D52D32CAB85A600CE9AAC /* Factory */,
-				EE0D52CD2CAB7F5000CE9AAC /* Base */,
+				EE0D52E82CAC752B00CE9AAC /* Protocols */,
+				EE0D52DB2CAC71DA00CE9AAC /* App */,
 				EE0D52C92CAB7C2100CE9AAC /* Extensions */,
-				EE0D52A72CAB717400CE9AAC /* Coordinators */,
 				EE0D52A62CAB716F00CE9AAC /* Scenes */,
-				EE0D52832CAB6CA900CE9AAC /* AppDelegate.swift */,
 				EE0D528C2CAB6CAA00CE9AAC /* Assets.xcassets */,
 				EE0D528E2CAB6CAA00CE9AAC /* LaunchScreen.storyboard */,
 				EE0D52912CAB6CAA00CE9AAC /* Info.plist */,
@@ -109,49 +111,34 @@
 			path = TabbarCoordinator;
 			sourceTree = "<group>";
 		};
-		EE0D529B2CAB6DEE00CE9AAC /* CoordinatorProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				EE0D529C2CAB6DFA00CE9AAC /* CoordinatorProtocol.swift */,
-			);
-			path = CoordinatorProtocol;
-			sourceTree = "<group>";
-		};
-		EE0D529E2CAB6E4200CE9AAC /* CoordinatorFactory */ = {
-			isa = PBXGroup;
-			children = (
-				EE0D529F2CAB6E4E00CE9AAC /* CoordinatorFactory.swift */,
-			);
-			path = CoordinatorFactory;
-			sourceTree = "<group>";
-		};
-		EE0D52A12CAB705C00CE9AAC /* HomeCoordinator */ = {
+		EE0D52A12CAB705C00CE9AAC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				EE0D52BE2CAB74C000CE9AAC /* HomeCoordinator.swift */,
 			);
-			path = HomeCoordinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		EE0D52A22CAB706100CE9AAC /* ProfileCoordinator */ = {
+		EE0D52A22CAB706100CE9AAC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				EE0D52C02CAB751700CE9AAC /* ProfileCoordinator.swift */,
 			);
-			path = ProfileCoordinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		EE0D52A32CAB706700CE9AAC /* SplashCoordinator */ = {
+		EE0D52A32CAB706700CE9AAC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				EE0D52A42CAB707200CE9AAC /* SplashCoorDinator.swift */,
 			);
-			path = SplashCoordinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		EE0D52A62CAB716F00CE9AAC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EE0D52DA2CAC71CC00CE9AAC /* Tabbar */,
 				EE0D52C42CAB7B9600CE9AAC /* Settings */,
 				EE0D52B02CAB726400CE9AAC /* Profile */,
 				EE0D52AF2CAB725F00CE9AAC /* Home */,
@@ -160,22 +147,11 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		EE0D52A72CAB717400CE9AAC /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				EE0D52D42CAB8C3100CE9AAC /* SettingsCoordinator */,
-				EE0D52A32CAB706700CE9AAC /* SplashCoordinator */,
-				EE0D52A22CAB706100CE9AAC /* ProfileCoordinator */,
-				EE0D52A12CAB705C00CE9AAC /* HomeCoordinator */,
-				EE0D52972CAB6DD700CE9AAC /* TabbarCoordinator */,
-				EE0D52C22CAB754F00CE9AAC /* AppCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
 		EE0D52A82CAB718C00CE9AAC /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				EE0D52E22CAC742A00CE9AAC /* Builder */,
+				EE0D52A32CAB706700CE9AAC /* Coordinator */,
 				EE0D52AC2CAB720400CE9AAC /* View */,
 				EE0D52AB2CAB71FC00CE9AAC /* ViewModel */,
 			);
@@ -201,6 +177,8 @@
 		EE0D52AF2CAB725F00CE9AAC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EE0D52DF2CAC73C400CE9AAC /* Builder */,
+				EE0D52A12CAB705C00CE9AAC /* Coordinator */,
 				EE0D52B42CAB727E00CE9AAC /* ViewModel */,
 				EE0D52B32CAB727A00CE9AAC /* View */,
 			);
@@ -210,6 +188,8 @@
 		EE0D52B02CAB726400CE9AAC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				EE0D52DC2CAC726800CE9AAC /* Builder */,
+				EE0D52A22CAB706100CE9AAC /* Coordinator */,
 				EE0D52B22CAB727000CE9AAC /* View */,
 				EE0D52B12CAB726800CE9AAC /* ViewModel */,
 			);
@@ -251,6 +231,8 @@
 		EE0D52C42CAB7B9600CE9AAC /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				EE0D52E52CAC74A200CE9AAC /* Builder */,
+				EE0D52D42CAB8C3100CE9AAC /* Coordinator */,
 				EE0D52C62CAB7B9D00CE9AAC /* ViewModel */,
 				EE0D52C52CAB7B9A00CE9AAC /* View */,
 			);
@@ -290,14 +272,6 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		EE0D52CD2CAB7F5000CE9AAC /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				EE0D52CE2CAB7F5A00CE9AAC /* BaseViewController.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		EE0D52D02CAB80E400CE9AAC /* UIViewControllerExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,21 +280,12 @@
 			path = UIViewControllerExtension;
 			sourceTree = "<group>";
 		};
-		EE0D52D32CAB85A600CE9AAC /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				EE0D529E2CAB6E4200CE9AAC /* CoordinatorFactory */,
-				EE0D529B2CAB6DEE00CE9AAC /* CoordinatorProtocol */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		EE0D52D42CAB8C3100CE9AAC /* SettingsCoordinator */ = {
+		EE0D52D42CAB8C3100CE9AAC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				EE0D52D52CAB8C3E00CE9AAC /* SettingsCoorDinator.swift */,
 			);
-			path = SettingsCoordinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		EE0D52D72CAB91F200CE9AAC /* UIIMageExtension */ = {
@@ -329,6 +294,63 @@
 				EE0D52D82CAB920200CE9AAC /* UIImageExtension.swift */,
 			);
 			path = UIIMageExtension;
+			sourceTree = "<group>";
+		};
+		EE0D52DA2CAC71CC00CE9AAC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D52972CAB6DD700CE9AAC /* TabbarCoordinator */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		EE0D52DB2CAC71DA00CE9AAC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D52832CAB6CA900CE9AAC /* AppDelegate.swift */,
+				EE0D52C22CAB754F00CE9AAC /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EE0D52DC2CAC726800CE9AAC /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D52DD2CAC727300CE9AAC /* ProfileBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		EE0D52DF2CAC73C400CE9AAC /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D52E02CAC73CD00CE9AAC /* HomeBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		EE0D52E22CAC742A00CE9AAC /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D52E32CAC743200CE9AAC /* SplashBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		EE0D52E52CAC74A200CE9AAC /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D52E62CAC74AB00CE9AAC /* SettingsBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		EE0D52E82CAC752B00CE9AAC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D52E92CAC753300CE9AAC /* CoordinatorProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,19 +425,21 @@
 			files = (
 				EE0D52842CAB6CA900CE9AAC /* AppDelegate.swift in Sources */,
 				EE0D52B62CAB728900CE9AAC /* ProfileViewController.swift in Sources */,
-				EE0D529D2CAB6DFA00CE9AAC /* CoordinatorProtocol.swift in Sources */,
 				EE0D52D92CAB920200CE9AAC /* UIImageExtension.swift in Sources */,
 				EE0D52C32CAB754F00CE9AAC /* AppCoordinator.swift in Sources */,
-				EE0D52CF2CAB7F5A00CE9AAC /* BaseViewController.swift in Sources */,
-				EE0D52A02CAB6E4E00CE9AAC /* CoordinatorFactory.swift in Sources */,
 				EE0D52BF2CAB74C000CE9AAC /* HomeCoordinator.swift in Sources */,
+				EE0D52E72CAC74AB00CE9AAC /* SettingsBuilder.swift in Sources */,
 				EE0D52D62CAB8C3E00CE9AAC /* SettingsCoorDinator.swift in Sources */,
 				EE0D52CC2CAB7C3C00CE9AAC /* UIView+Extension.swift in Sources */,
+				EE0D52E42CAC743200CE9AAC /* SplashBuilder.swift in Sources */,
+				EE0D52E12CAC73CD00CE9AAC /* HomeBuilder.swift in Sources */,
 				EE0D52C82CAB7BA700CE9AAC /* SettingsViewController.swift in Sources */,
 				EE0D52AE2CAB720A00CE9AAC /* SplashViewModel.swift in Sources */,
 				EE0D52A52CAB707200CE9AAC /* SplashCoorDinator.swift in Sources */,
+				EE0D52DE2CAC727300CE9AAC /* ProfileBuilder.swift in Sources */,
 				EE0D52BB2CAB73A500CE9AAC /* HomeViewModel.swift in Sources */,
 				EE0D52B92CAB72F000CE9AAC /* ProfileViewModel.swift in Sources */,
+				EE0D52EA2CAC753300CE9AAC /* CoordinatorProtocol.swift in Sources */,
 				EE0D52992CAB6DE600CE9AAC /* TabbarCoordinator.swift in Sources */,
 				EE0D52BD2CAB73FD00CE9AAC /* HomeViewController.swift in Sources */,
 				EE0D52D22CAB80F900CE9AAC /* UIViewControllerExtension.swift in Sources */,

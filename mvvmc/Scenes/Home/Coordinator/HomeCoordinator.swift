@@ -24,9 +24,7 @@ final class HomeCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let homeViewModel = HomeViewModel()
-        let homeViewController = HomeViewController(viewModel: homeViewModel)
-        homeViewController.navigationDelegate = self
+        let homeViewController = HomeBuilder.generateHomeView(navigationDelegate: self)
         navigationController.setViewControllers([homeViewController], animated: true)
     }
 }
