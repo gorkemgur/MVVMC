@@ -27,6 +27,10 @@ final class HomeCoordinator: CoordinatorProtocol {
         let homeViewController = HomeBuilder.generateHomeView(navigationDelegate: self)
         navigationController.setViewControllers([homeViewController], animated: true)
     }
+    
+    deinit {
+        print("🔴 HomeCoordinator deinit")
+    }
 }
 
 extension HomeCoordinator: HomeCoordinatorNavigationDelegate {

@@ -10,6 +10,8 @@ import UIKit
 final class AppCoordinator: CoordinatorProtocol {
     let navigationController: UINavigationController
     
+    private var tabbarCoordinator: TabbarCoordinator? = nil
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -31,7 +33,7 @@ extension AppCoordinator: SplashCoordinatorNavigationDelegate {
     }
     
     private func showMainCoordinator() {
-        let tabbarCoorDinator = TabbarCoordinator(navigationController: navigationController)
-        tabbarCoorDinator.start()
+        tabbarCoordinator = TabbarCoordinator(navigationController: navigationController)
+        tabbarCoordinator?.start()
     }
 }

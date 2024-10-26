@@ -19,4 +19,8 @@ final class HomeViewModel {
     func viewDidLoad() {
         view?.handleOutput(.showSuccessMessage("Page Load Success"))
     }
+    
+    deinit {
+        print("⚠️ Deinit HomeViewModel")
+    }
 }

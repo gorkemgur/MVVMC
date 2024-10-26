@@ -24,4 +24,8 @@ final class ProfileViewModel {
         navigationDelegate.handleNavigation(navigationType)
     }
     
+    deinit {
+        print("💀 ProfileViewModel deinit, navigationDelegate: \(String(describing: navigationDelegate))")
+    }
+    
 }

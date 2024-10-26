@@ -8,7 +8,7 @@
 import UIKit
 
 // To handle profile navigation
-protocol ProfileCoordinatorNavigationDelegate {
+protocol ProfileCoordinatorNavigationDelegate: AnyObject {
     func handleNavigation(_ navigationType: ProfileNavigationType)
 }
 
@@ -22,6 +22,10 @@ final class ProfileCoordinator: CoordinatorProtocol {
     func start() {
         let profileViewController = ProfileBuilder.generateProfileView(delegate: self)
         navigationController.setViewControllers([profileViewController], animated: true)
+    }
+    
+    deinit {
+        print("🔴 ProfileCoordinator deinit")
     }
 }
 

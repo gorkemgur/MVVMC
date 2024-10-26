@@ -8,9 +8,18 @@
 import UIKit
 
 final class TabbarCoordinator: CoordinatorProtocol {
-    //Define this variable as let we don't want to change from another class
     let navigationController: UINavigationController
     private var tabbarController: UITabBarController?
+    
+    private lazy var homeCoordinator: HomeCoordinator = {
+        let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
+        return homeCoordinator
+    }()
+    
+    private lazy var profileCoordinator: ProfileCoordinator = {
+        let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
+        return profileCoordinator
+    }()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -18,9 +27,6 @@ final class TabbarCoordinator: CoordinatorProtocol {
     
     func start() {
         tabbarController = UITabBarController()
-        
-        let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
-        let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
         
         homeCoordinator.start()
         profileCoordinator.start()
@@ -30,17 +36,21 @@ final class TabbarCoordinator: CoordinatorProtocol {
             profileCoordinator.navigationController
         ], animated: true)
         
-        homeCoordinator.navigationController.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(systemName: "house.fill"), tag: 0)
-        profileCoordinator.navigationController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle.fill"), tag: 0)
+        homeCoordinator.navigationController.tabBarItem = UITabBarItem(title: "Home",
+                                                                     image: UIImage(systemName: "house.fill"),
+                                                                     tag: 0)
+        profileCoordinator.navigationController.tabBarItem = UITabBarItem(title: "Profile",
+                                                                        image: UIImage(systemName: "person.crop.circle.fill"),
+                                                                        tag: 1)
         
         guard let tabbarController = tabbarController else { return }
-        
         buildTabbarAppearance()
-        
         navigationController.setViewControllers([tabbarController], animated: true)
-        
     }
     
+    deinit {
+        print("🔴 TabbarCoordinator deinit")
+    }
 }
 
 extension TabbarCoordinator {
